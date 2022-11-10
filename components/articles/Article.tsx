@@ -1,13 +1,16 @@
 import React from 'react';
+import Image from 'next/image'
 
-const Article = ({title, text, published, image}) => {
+function Article(props) {
+    console.log(props.image);
+
     return (
         <div>
-            <div>{title}</div>
-            <div>{text}</div>
-            <div>{published}</div>
+            <h1>{props.title}</h1>
+            <h3>{props.published}</h3>
+            <p>{props.text}</p>
+            <Image width={100} height={100} alt={"Image"} src={props.image}/>
         </div>
-
     );
 }
 

@@ -1,0 +1,16 @@
+.box {
+    padding: 0.5rem;
+    box-shadow: grey 0 1px 0 0 ;
+    margin: 0.3rem 0;
+}
+
+.box h2 {
+    font-size: 1rem;
+}
+
+.box p {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bolder;
+    color: grey;
+}

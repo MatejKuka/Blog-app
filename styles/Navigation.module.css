@@ -1,0 +1,43 @@
+.navigationContainer {
+    display: flex;
+    justify-content: left;
+    background: white;
+    position: sticky;
+    box-shadow: grey 0 0 3px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+.navigationContainer ul li {
+    display: inline-block;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+
+}
+.navigationContainer ul li:hover {
+   color: dodgerblue;
+}
+
+.navigationContainer ul {
+    width: 100%;
+}
+
+.categorylist {
+    flex-grow: 1;
+}
+
+.searchBar {
+    width: 12rem;
+    height: 1rem;
+}
+
+
+
+
