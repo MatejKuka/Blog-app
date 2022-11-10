@@ -15,7 +15,7 @@ export default function Home() {
                     <Grid item lg={9} md={8}>
                         <MostPopularArticles/>
                     </Grid>
-                    <Divider orientation="vertical" variant="middle" flexItem sx={{mr: "-1px", backgroundColor: "blue"}}/>
+                    <Divider orientation="vertical" variant="middle" flexItem sx={{mr: "-1px"}}/>
                     <Grid item lg={3} md={4}>
                         <MostRecentArticles/>
                     </Grid>

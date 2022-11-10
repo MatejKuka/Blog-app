@@ -14,3 +14,7 @@
     font-weight: bolder;
     color: grey;
 }
+
+.box:hover h2{
+    text-decoration: underline;
+}

@@ -3,12 +3,33 @@
     height: 100%;
 }
 
-.firstcontainer h3{
+.largecontainer h3{
     text-transform: uppercase;
     font-weight: 700;
     color: grey;
+    text-decoration: none;
 }
 
-.firstcontainer{
+.largecontainer h1{
+    text-transform: uppercase;
+}
 
+.largecontainer:hover h1{
+    text-decoration: underline;
+}
+
+.smallcontainer h1{
+    font-size: 1.2rem;
+    margin: 0.3rem 0;
+}
+
+.smallcontainer h3{
+    margin: 0.3rem 0 ;
+    color: grey;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.smallcontainer:hover h1{
+    text-decoration: underline;
 }

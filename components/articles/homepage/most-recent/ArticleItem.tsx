@@ -11,12 +11,12 @@ function ArticleItem(props) {
         <Link href={`articles/${props.slug}`}>
             <div className={styles.box}>
                 <Grid container>
-                    <Grid item md={7}>
+                    <Grid item xs={6} md={7}>
                         <h2>{props.title}</h2>
                         <p>{props.category}</p>
                     </Grid>
-                    <Grid item md={1}/>
-                    <Grid item md={4}>
+                    <Grid item xs={2} md={1}/>
+                    <Grid item xs={4} md={4}>
                         <Image
                             width={100}
                             height={100}
