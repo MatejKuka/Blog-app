@@ -1,3 +1,7 @@
 .container {
     padding: 0.2rem;
 }
+
+.container h2 {
+    box-shadow: black 0 3px 0;
+}

@@ -21,6 +21,7 @@ export default function Home() {
                     </Grid>
                 </Grid>
             </div>
+            <Divider orientation="horizontal" variant="middle" sx={{marginTop: "7rem"}}/>
         </div>
     )
 }

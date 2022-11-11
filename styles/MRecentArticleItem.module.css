@@ -4,8 +4,8 @@
     margin: 0.3rem 0;
 }
 
-.box h2 {
-    font-size: 1rem;
+.box h1 {
+    font-size: 1.2rem;
 }
 
 .box p {
@@ -15,6 +15,13 @@
     color: grey;
 }
 
-.box:hover h2{
+.box:hover h1{
     text-decoration: underline;
+}
+
+.imagecontainer{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "../../../../styles/MRecentArticleItem.module.css";
 import Image from 'next/image'
 import Link from "next/link";
@@ -12,16 +11,17 @@ function ArticleItem(props) {
             <div className={styles.box}>
                 <Grid container>
                     <Grid item xs={6} md={7}>
-                        <h2>{props.title}</h2>
+                        <h1>{props.title}</h1>
                         <p>{props.category}</p>
                     </Grid>
                     <Grid item xs={2} md={1}/>
                     <Grid item xs={4} md={4}>
-                        <Image
-                            width={100}
-                            height={100}
-                            src={`${API_URL}${props.image}`} alt={"Article picture"}
-                        />
+                        <div className={styles.imagecontainer}>
+                            <Image
+                                fill
+                                src={`${API_URL}${props.image}`} alt={"Article picture"}
+                            />
+                        </div>
                     </Grid>
                 </Grid>
             </div>

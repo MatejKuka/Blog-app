@@ -8,7 +8,7 @@ import Link from "next/link";
 function Navigation() {
     return (
         <div className={styles.navigationContainer}>
-            <h1 className={styles.logo}>TechBlog</h1>
+            <h1 className={styles.logo}>.MKNotes</h1>
             <div className={styles.categorylist}>
                 <ul>
                     <li><Link href={"/category/politics"}>Politics</Link></li>

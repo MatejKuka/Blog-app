@@ -1,9 +1,43 @@
 import React from 'react';
+import styles from "../../../../styles/MPopularArticleItem.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
-function ArticleItem(props) {
+const API_URL = "http://localhost:1337";
+
+export function LargeArticleItem({slug, category, title, imageURL}) {
     return (
-        <div></div>
+        <Link href={`articles/${slug}`}>
+            <div className={styles.largecontainer}>
+                <div className={styles.largeimagecontainer}>
+                    <Image fill
+                           alt={"Image"}
+                           src={`${API_URL}${imageURL}`}
+                           priority
+                    />
+                </div>
+                <h3>{category}</h3>
+                <h1>{title}</h1>
+            </div>
+        </Link>
     );
 }
 
-export default ArticleItem;
+export function SmallArticleItem({slug, category, title, imageURL}) {
+    return (
+        <Link href={`articles/${slug}`}>
+            <div className={styles.smallcontainer}>
+                <div className={styles.smallimagecontainer}>
+                    <Image alt={"Image"}
+                           src={`${API_URL}${imageURL}`}
+                           fill
+                           priority
+                    />
+                </div>
+                <h3>{category}</h3>
+                <h1>{title}</h1>
+            </div>
+        </Link>
+    );
+}
+
