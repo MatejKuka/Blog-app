@@ -1,15 +1,22 @@
-.article_container {
-    background: #cbd8ea;
-    margin: 1rem;
-    padding: 0.5rem;
+.articlecontainer {
+    outline: 2px grey dashed;
+    margin: 2rem;
+}
+
+.articlecontainer h1{
 
 }
 
-.article_container h1{
+.articlecontainer h3{
 
 }
 
-.article_container p{
+.articlecontainer p{
 
 }
 
+.imagecontainer {
+    width: 800px;
+    position: relative;
+    height: 550px;
+}

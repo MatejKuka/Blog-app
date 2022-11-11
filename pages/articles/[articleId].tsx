@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Article from "../../components/articles/Article";
 import {useRouter} from "next/router";
 import useFetch from "../../hooks/useFetch";
+import Navigation from "../../components/UI/Navigation";
 
 const url = "http://localhost:1337"
 
@@ -20,7 +21,9 @@ function ArticleId() {
 
     return (
         <div>
+            <Navigation/>
             {data && <Article
+                category={data.attributes.category.data.attributes.category}
                 title={data.attributes.title}
                 text={data.attributes.text}
                 published={data.attributes.publishedAt}

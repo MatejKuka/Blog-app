@@ -1,15 +1,23 @@
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import styles from "../../styles/Article.module.css";
 
-function Article(props) {
-    console.log(props.image);
+function Article({title, text, image, published, category}) {
 
     return (
-        <div>
-            <h1>{props.title}</h1>
-            <h3>{props.published}</h3>
-            <p>{props.text}</p>
-            <Image width={100} height={100} alt={"Image"} src={props.image}/>
+        <div className={styles.articlecontainer}>
+
+            <h1>{title}</h1>
+            <h3>{published}</h3>
+            <h2>{category}</h2>
+            <div className={styles.imagecontainer}>
+                <Image
+                    fill
+                    alt={"Article Image"}
+                    src={image}
+                />
+            </div>
+            <p>{text}</p>
         </div>
     );
 }
