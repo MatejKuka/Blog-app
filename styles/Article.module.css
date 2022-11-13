@@ -1,10 +1,10 @@
 .articlecontainer {
-    outline: 2px grey dashed;
-    margin: 2rem;
+    //outline: 2px grey dashed;
+    padding: 2rem;
 }
 
 .articlecontainer h1{
-
+    font-size: 3rem;
 }
 
 .articlecontainer h3{
@@ -12,11 +12,20 @@
 }
 
 .articlecontainer p{
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0 1rem;
+    text-emphasis: teal;
 
 }
 
 .imagecontainer {
-    width: 800px;
+    width: 90%;
     position: relative;
     height: 550px;
+    margin: 2rem auto
+}
+
+.image {
+    object-fit: cover;
 }

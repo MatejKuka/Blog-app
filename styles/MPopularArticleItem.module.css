@@ -33,12 +33,24 @@
 
 .largeimagecontainer {
     position: relative;
-    max-width: 95%;
+    width: 95%;
     height: 400px;
+}
+
+.smallcontainer{
+    margin-right: 1rem;
 }
 
 .smallimagecontainer {
     position: relative;
-    max-width: 250px;
-    height: 180px;
+    max-width: 100%;
+    height: 200px;
+}
+
+.small_image{
+    object-fit: cover;
+}
+
+.large_image{
+    object-fit: cover;
 }

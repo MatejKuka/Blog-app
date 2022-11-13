@@ -23,5 +23,8 @@
     position: relative;
     width: 100px;
     height: 100px;
-    object-fit: contain;
+}
+
+.image{
+    object-fit: cover;
 }

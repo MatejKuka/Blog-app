@@ -10,10 +10,11 @@ export function LargeArticleItem({slug, category, title, imageURL}) {
         <Link href={`articles/${slug}`}>
             <div className={styles.largecontainer}>
                 <div className={styles.largeimagecontainer}>
-                    <Image fill
-                           alt={"Image"}
-                           src={`${API_URL}${imageURL}`}
-                           priority
+                    <Image
+                        fill
+                        alt={"Image"}
+                        src={`${API_URL}${imageURL}`}
+                        className={styles.large_image}
                     />
                 </div>
                 <h3>{category}</h3>
@@ -31,7 +32,7 @@ export function SmallArticleItem({slug, category, title, imageURL}) {
                     <Image alt={"Image"}
                            src={`${API_URL}${imageURL}`}
                            fill
-                           priority
+                           className={styles.small_image}
                     />
                 </div>
                 <h3>{category}</h3>

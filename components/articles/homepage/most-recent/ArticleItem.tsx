@@ -18,6 +18,7 @@ function ArticleItem(props) {
                     <Grid item xs={4} md={4}>
                         <div className={styles.imagecontainer}>
                             <Image
+                                className={styles.image}
                                 fill
                                 src={`${API_URL}${props.image}`} alt={"Article picture"}
                             />

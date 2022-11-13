@@ -1,16 +1,9 @@
 .container {
-
+    padding: 2rem;
 }
 
 .maincontainer {
-
-    width: 95%;
+    width: 100%;
     max-width: 1600px;
-    margin: 3rem auto;
-}
-
-@media (min-width: 900px) {
-    .maincontainer {
-        height: 600px;
-    }
+    margin: auto;
 }
