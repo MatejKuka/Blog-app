@@ -1,24 +1,32 @@
-import React from 'react';
-import styles from "../../styles/Navigation.module.css"
+import React, {useEffect} from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import {SEARCH_MOCK_DATA} from "../../mock-data/search-mock";
 import {TextField} from "@mui/material";
 import Link from "next/link";
+import useFetch from "../../hooks/useFetch";
 
 function Navigation() {
+    const {data} = useFetch(`http://localhost:1337/api/categories`);
+
+    useEffect(() => {
+        console.log(data);
+    }, [data]);
+
     return (
-        <div className={styles.navigationContainer}>
-            <h1 className={styles.logo}>.MKNotes</h1>
-            <div className={styles.categorylist}>
+        <div className={"flex sticky justify-start bg-white p-[10px] w-full top-0 z-10 shadow-md"}>
+            <h1 className={"text-4xl m-3"}>.MKNotes</h1>
+            <div className={"grow"}>
                 <ul>
-                    <li><Link href={"/category/politics"}>Politics</Link></li>
-                    <li><Link href={"/category/business"}>Business</Link></li>
-                    <li><Link href={"/category/society"}>Society</Link></li>
-                    <li><Link href={"/category/technology"}>Technology</Link></li>
-                    <li><Link href={"/category/others"}>Others</Link></li>
+                    {data?.map(category => (
+                        <li className={"inline-block uppercase m-4 text-2xl hover:text-cyan-500"}>
+                            <Link
+                                href={`/category/${category.attributes.category}}`}>
+                                {category.attributes.category}
+                            </Link>
+                        </li>))}
                 </ul>
             </div>
-            <div className={styles.searchBar}>
+            <div className={"w-[12rem] h-[1rem]"}>
                 <Autocomplete
                     fullWidth={true}
                     freeSolo
@@ -29,7 +37,7 @@ function Navigation() {
                         <TextField
                             {...params}
                             label="Search input"
-                            className={styles.searchtextfield}
+                            className={"searchtextfield "}
                             InputProps={{
                                 ...params.InputProps,
                                 type: 'search',

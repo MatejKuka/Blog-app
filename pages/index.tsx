@@ -1,6 +1,5 @@
-import styles from "../styles/Home.module.css";
 import Navigation from "../components/UI/Navigation";
-import {Grid, Divider, Box, Stack, Paper} from "@mui/material";
+import {Grid, Divider, Stack, Paper} from "@mui/material";
 import MostPopularArticles from "../components/articles/homepage/most-popular/most-popular-articles";
 import MostRecentArticles from "../components/articles/homepage/most-recent/most-recent-articles";
 
@@ -10,8 +9,8 @@ export default function Home() {
     return (
         <>
             <Navigation/>
-            <div className={styles.container}>
-                <div className={styles.maincontainer}>
+            <div className={"p-8"}>
+                <div className={"w-full m-auto max-w-screen-2xl"}>
                     <Grid container spacing={1}>
                         <Grid item lg={9} md={8}>
                             <MostPopularArticles/>
